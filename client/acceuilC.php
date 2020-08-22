@@ -12,6 +12,8 @@
 <span >
 					Bienvenue chere client
 					</span>
-
+					<a href="../deconnexion.php"><button  >
+					deconnexion
+						</button></a>
 </body>
 </html>

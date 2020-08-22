@@ -1,0 +1,27 @@
+
+CREATE TABLE IF NOT EXISTS `pro` (
+  `idP` int(5) NOT NULL AUTO_INCREMENT,
+  `emailP` varchar(40) CHARACTER SET latin1 NOT NULL,
+  `pswP` varchar(40) CHARACTER SET latin1 NOT NULL,
+  `nomP` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `Adresse` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `domaine` varchar(40) CHARACTER SET latin1 NOT NULL,
+  `date_creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idP`),
+  UNIQUE KEY `emailP` (`emailP`,`pswP`,`nomP`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=13 ;
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `client` (
+  `idC` int(5) NOT NULL AUTO_INCREMENT,
+  `nomC` varchar(20) CHARACTER SET latin1 NOT NULL,
+  `emailC` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `pswrdC` varchar(30) CHARACTER SET latin1 NOT NULL,
+  PRIMARY KEY (`idC`),
+  UNIQUE KEY `emailC` (`emailC`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=36 ;

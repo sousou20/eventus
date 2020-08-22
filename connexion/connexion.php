@@ -113,9 +113,14 @@ if(isset($_POST['login'])) { // si le bouton "login" est appuyé
 					</div>
 
 					<div class="text-center p-t-25">
-					Avez-vous un compte ?!
-						<a class="txt2" href="connexion.php"aria-hidden="true">
-						connectez-vous à votre compte
+					Vous n’avez pas de compte?
+						<a class="txt2" href="../client/inscription.php"aria-hidden="true">
+						client
+				
+						</a>
+						/
+						<a class="txt2" href="../pro/inscription.php"aria-hidden="true">
+					pro
 				
 						</a>
 					</div>
