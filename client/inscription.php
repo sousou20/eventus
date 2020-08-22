@@ -106,7 +106,7 @@ header("location:acceuilC.php");
 						</button>
 					</div>
 
-					<div class="text-center p-t-25">
+					<div class="text-center p-t-40">
 					Avez-vous un compte ?!
 						<a class="txt2" href="../connexion/connexion.php"aria-hidden="true">
 						connectez-vous à votre compte

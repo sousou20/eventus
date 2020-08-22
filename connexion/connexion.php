@@ -112,7 +112,7 @@ if(isset($_POST['login'])) { // si le bouton "login" est appuyé
 						</button>
 					</div>
 
-					<div class="text-center p-t-25">
+					<div class="text-center p-t-40">
 					Vous n’avez pas de compte?
 						<a class="txt2" href="../client/inscription.php"aria-hidden="true">
 						client
