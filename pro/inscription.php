@@ -7,11 +7,6 @@ if (isset($_POST['inscription'])) {
 	$nomP= trim(htmlentities($_POST['nomP'], ENT_QUOTES));
 	$wilaya = trim(htmlentities($_POST['wilaya'], ENT_QUOTES));
 	$password = trim(htmlentities($_POST['password'], ENT_QUOTES));
-	$password2 = trim(htmlentities($_POST['password2'], ENT_QUOTES));
-/*	$nomP = $_POST['nomP'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$password2 = $_POST['password2'];*/
 $mailC = mysqli_query($db, "SELECT * FROM client WHERE emailC = '".$_POST['email']."'");
 $nomC = mysqli_query($db, "SELECT * FROM client WHERE nomC = '".$_POST['nomP']."'");
 $mailPro = mysqli_query($db, "SELECT * FROM pro WHERE emailP = '".$_POST['email']."'");
@@ -27,7 +22,7 @@ if(mysqli_num_rows($nomC) OR mysqli_num_rows($nomPro)) {
 }else{
 //create pro
 
-$sql="INSERT INTO pro(nomP,emailP,pswP,Adresse) VALUES('$nomP','$email','$password','$wilaya')";
+$sql="INSERT INTO pro(nomP,emailP,pswP,Adresse) VALUES('$nomP','$email','".hash('sha256', $password)."','$wilaya')";
 mysqli_query($db,$sql);
 header("location:acceuilP.php");  
 }}

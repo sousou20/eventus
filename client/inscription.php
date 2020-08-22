@@ -3,10 +3,11 @@ session_start();
 //connect to dB
 $db=mysqli_connect('localhost', 'root','','eventus');
 if (isset($_POST['inscription'])) {
+	 
 	$email = trim(htmlentities($_POST['email'], ENT_QUOTES));
 	$nom= trim(htmlentities($_POST['nomC'], ENT_QUOTES));
 	$password = trim(htmlentities($_POST['password'], ENT_QUOTES));
-	$password2 = trim(htmlentities($_POST['password2'], ENT_QUOTES));
+
 $mailC = mysqli_query($db, "SELECT * FROM client WHERE emailC = '".$_POST['email']."'");
 $nomC = mysqli_query($db, "SELECT * FROM client WHERE nomC = '".$_POST['nomC']."'");
 $mailP = mysqli_query($db, "SELECT * FROM pro WHERE emailP = '".$_POST['email']."'");
