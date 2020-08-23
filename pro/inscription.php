@@ -22,7 +22,7 @@ if(mysqli_num_rows($nomC) OR mysqli_num_rows($nomPro)) {
 }else{
 //create pro
 
-$sql="INSERT INTO pro(nomP,emailP,pswP,Adresse) VALUES('$nomP','$email','".hash('sha256', $password)."','$wilaya')";
+$sql="INSERT INTO pro(nomP,emailP,pswP,Adresse) VALUES('$nomP','$email','$password','$wilaya')";
 mysqli_query($db,$sql);
 header("location:acceuilP.php");  
 }}
